@@ -1,6 +1,6 @@
 package graph
 
-import "github.com/shion0625/gqlgen-todos/graph/model" //追加
+import "github.com/yk-mt12/coffee-app-mobile-backend/graph/model" //追加
 
 //go:generate go run github.com/99designs/gqlgen generate //追加
 //今後schema.graphqlsを変更した際に go generate ./...で更新することができるようになる。
