@@ -20,7 +20,7 @@ func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) 
 	todo := &model.Todo{
 		Text: input.Text,
 		ID:   fmt.Sprintf("T%d", rand),
-		User: &model.User{ID: input.UserID, Name: "user " + input.UserID},
+		User: input.UserID,
 	}
 	// ここでのrはresolver.goで宣言したResolver型を示しているため、t.todosはresolver.goで宣言したtodosを示している。
 	r.todos = append(r.todos, todo)
@@ -29,6 +29,8 @@ func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) 
 
 // Todos is the resolver for the todos field.
 func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
+	todos := []*model.Todo{}
+	r.DB.Find(&todos)
 	return r.todos, nil
 }
 
