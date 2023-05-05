@@ -9,7 +9,7 @@ import (
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/yk-mt12/coffee-app-mobile-backend/graph"
 	"github.com/yk-mt12/coffee-app-mobile-backend/db"
-	"githubcom/joho/godotenv"
+	"github.com/joho/godotenv"
 )
 
 const defaultPort = "8000"

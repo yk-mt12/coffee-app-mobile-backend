@@ -4,6 +4,7 @@ go 1.19
 
 require (
 	github.com/99designs/gqlgen v0.17.31
+	github.com/joho/godotenv v1.5.1
 	github.com/vektah/gqlparser/v2 v2.5.1
 	gorm.io/driver/postgres v1.5.0
 	gorm.io/gorm v1.25.0
